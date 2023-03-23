@@ -166,6 +166,8 @@
     wget
     curl
     gnupg
+    pinentry
+    pinentry-gnome
     nerdfonts
   ];
 
