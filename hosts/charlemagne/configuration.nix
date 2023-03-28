@@ -31,6 +31,8 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  networking.firewall.checkReversePath = "loose";
+
   # Set your time zone.
   time.timeZone = "America/New_York";
 
@@ -136,6 +138,7 @@
       xclip
       cantarell-fonts
       btop
+      neofetch
 
       # Development related packages
       cargo
@@ -168,7 +171,11 @@
     gnupg
     pinentry
     pinentry-gnome
+  ];
+
+  fonts.fonts = with pkgs; [
     nerdfonts
+    corefonts
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

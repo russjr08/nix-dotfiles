@@ -44,6 +44,7 @@
                 nixpkgs.overlays = [ overlay-unstable ];
                 environment.systemPackages = with pkgs; [
                   unstable.jetbrains-toolbox
+                  unstable.hubstaff
                 ];
               }
           )
