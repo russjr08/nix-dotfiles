@@ -156,6 +156,15 @@
     VISUAL = "vim";
   };
 
+  # Enable Yubikey Authentication
+  security.pam.services = {
+    login.u2fAuth = true;
+    sudo.u2fAuth = true;
+  };
+
+  # Enables the "Please touch the device" on authentication attempts via Yubikey
+  security.pam.u2f.cue = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
