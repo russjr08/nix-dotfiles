@@ -139,11 +139,15 @@
       cantarell-fonts
       btop
       neofetch
+      libsecret
+      alacritty
 
       # Development related packages
       cargo
       rustup
       gcc
+
+      adoptopenjdk-icedtea-web
     ];
   };
 
