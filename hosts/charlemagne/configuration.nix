@@ -150,6 +150,11 @@
 
       adoptopenjdk-icedtea-web
     ];
+
+    openssh.authorizedKeys.keys = [
+      "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDl671kBn4mDy7BlMdjddWKL8mrBOA2k8HmvbYf8YRRDACz+eD23um2UiHbr7vfsFlwTpP556sQCzJhko/MTfjBmQG/663lCJCQVany4i+2jAx8IhgK3I3RKLVJU424XyE5TLivze1FievR1Aau61UfkX6w5WQUPMHLF/rH3tIu7SSB7Xx7pGOzWUFxrWTy8oWo4j+ffLWppWz0XxJZFSXkJBSZg456NCsVQgIZkG/xLKfGCeiJeJQa6musXM2pFVVZmGrhAWmYk3f4VJFhm5MqrFXDkj4HLP/j1AarYee+0rtq8ScwRQEam8y7Vyw18AVCAenwJVsFz3vvu6kDAZ8r admin@russ.network"
+
+    ];
   };
 
   environment.variables = {
