@@ -146,6 +146,7 @@
       cargo
       rustup
       gcc
+      jdt-language-server
 
       adoptopenjdk-icedtea-web
     ];

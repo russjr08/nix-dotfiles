@@ -31,6 +31,9 @@ in {
       # Clang Powered LSP
       ccls
 
+      # Java LSP
+      jdt-language-server
+
     ];
 
     extraConfig = builtins.concatStringsSep "\n" [

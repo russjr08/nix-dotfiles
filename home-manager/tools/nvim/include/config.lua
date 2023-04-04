@@ -218,3 +218,4 @@ rt.setup({
 rt.inlay_hints.enable()
 
 require('lspconfig').ccls.setup {}
+require('lspconfig').jdtls.setup{ cmd = { 'jdt-language-server', '-configuration', '/home/russjr08/.cache/jdtls/config', '-data', '/home/russjr08/.cache/jdtls/workspace', '--jvm-arg=-javaagent:/home/russjr08/.local/share/java/lombok.jar' } }
