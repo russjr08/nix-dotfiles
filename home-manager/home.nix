@@ -6,6 +6,8 @@
 
     # You can also split up your configuration and import pieces of it here:
     ./tools/nvim/nvim.nix
+    ./tools/tmux/tmux.nix
+    ./tools/alacritty/alacritty.nix
   ];
 
   nixpkgs = {

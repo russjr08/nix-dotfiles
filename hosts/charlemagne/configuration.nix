@@ -140,7 +140,7 @@
       btop
       neofetch
       libsecret
-      alacritty
+      fzf
 
       # Development related packages
       cargo
