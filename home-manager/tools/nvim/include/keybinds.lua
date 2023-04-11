@@ -18,7 +18,7 @@ wk.setup {}
 wk.register({
     h = { "<cmd>nohl<CR>", "Dismiss Highlighting" },
     [ "<F11>" ] = { "<cmd>LazyGit<CR>", "LazyGit" },
-    [ "<F12>" ] = { "<cmd>ToggleTerm", "Open Terminal" },
+    [ "<F12>" ] = { "<cmd>ToggleTerm<CR>", "Open Terminal" },
     t = {
 	name = "Tabs",
 	p = { "<cmd>BufferPrevious<CR>", "Previous Tab" },
