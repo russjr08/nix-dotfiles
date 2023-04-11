@@ -36,10 +36,20 @@
     homeDirectory = "/home/russjr08";
   };
 
-  # Add stuff for your user as you see fit:
-
+  programs = {
   # Enable home-manager
-  programs.home-manager.enable = true;
+    home-manager.enable = true;
+    lazygit = {
+      enable = true;
+      settings = {
+        git = {
+          autoFetch = false;
+        };
+      };
+    };
+
+  };
+
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

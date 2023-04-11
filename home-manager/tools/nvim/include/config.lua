@@ -219,3 +219,21 @@ rt.inlay_hints.enable()
 
 require('lspconfig').ccls.setup {}
 require('lspconfig').jdtls.setup{ cmd = { 'jdt-language-server', '-configuration', '/home/russjr08/.cache/jdtls/config', '-data', '/home/russjr08/.cache/jdtls/workspace', '--jvm-arg=-javaagent:/home/russjr08/.local/share/java/lombok.jar' } }
+
+-- Configure ToggleTerm
+require('toggleterm').setup {}
+
+-- Sets up common keybindings to move around while the terminal is active
+function _G.set_terminal_keymaps()
+  local opts = {buffer = 0}
+  vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+  vim.keymap.set('t', 'jk', [[<C-\><C-n>]], opts)
+  vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
+  vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
+  vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
+  vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+  vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
+end
+
+-- if you only want these mappings for toggle term use term://*toggleterm#* instead
+vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')

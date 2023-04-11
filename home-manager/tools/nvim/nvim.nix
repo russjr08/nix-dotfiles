@@ -44,6 +44,7 @@ in {
       ''
       lua << EOF
       ${lib.strings.fileContents ./include/config.lua}
+      ${lib.strings.fileContents ./include/keybinds.lua}
       EOF
       ''
 
@@ -68,6 +69,10 @@ in {
       nvim-dap
       trouble-nvim
       editorconfig-nvim
+      nvim-lightbulb
+      nvim-code-action-menu
+      toggleterm-nvim
+      lazygit-nvim
 
       # Themes
       gruvbox-nvim
