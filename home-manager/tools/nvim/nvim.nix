@@ -55,7 +55,7 @@ in {
 
       vim-plug
       telescope-nvim
-      nvim-treesitter
+      nvim-treesitter.withAllGrammars
       barbar-nvim
       nerdcommenter
       which-key-nvim
@@ -75,7 +75,7 @@ in {
       lazygit-nvim
 
       # Themes
-      gruvbox-nvim
+      nvcode-color-schemes-vim
 
       # Language Support
       nvim-lspconfig
@@ -83,6 +83,7 @@ in {
       rust-tools-nvim
       kotlin-vim
       rust-tools-nvim
+      vim-markdown
 
       # Plugins from Git
       (plugin "NLKNguyen/papercolor-theme")
