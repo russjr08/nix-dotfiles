@@ -1,0 +1,13 @@
+ORIGINAL_PS1=$PS1
+function prompt_command {
+    if [[ $IN_NIX_SHELL == "impure" ]];
+    then
+	export PS1="${ORIGINAL_PS1}🛠  "
+    else
+	export PS1=$ORIGINAL_PS1
+    fi
+}
+
+export PROMPT_COMMAND=prompt_command
+
+eval "$(direnv hook bash)"
