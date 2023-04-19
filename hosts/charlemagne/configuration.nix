@@ -20,6 +20,7 @@
 
   # Enables Flakes Support
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.auto-optimise-store = true;
 
   networking.hostName = "charlemagne"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -134,6 +135,12 @@
       # Gnome related packages
       gnome.gnome-tweaks
 
+      # Gaming
+      mangohud
+      goverlay
+      vkBasalt
+      replay-sorcery
+
       # Etc
       xclip
       cantarell-fonts
@@ -143,9 +150,6 @@
       fzf
 
       # Development related packages
-      cargo
-      rustup
-      gcc
       jdt-language-server
 
       adoptopenjdk-icedtea-web
@@ -204,6 +208,8 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
+  programs.ssh.askPassword = "${pkgs.gnome.seahorse}/libexec/seahorse/ssh-askpass";
 
   # List services that you want to enable:
 
