@@ -123,7 +123,7 @@
     initialPassword = "SecurePassword!11";
     isNormalUser = true;
     description = "Russell Richardson";
-    extraGroups = [ "networkmanager" "wheel" "podman" "plugdev" "openrazer" ];
+    extraGroups = [ "networkmanager" "wheel" "podman" "plugdev" "openrazer" "adbusers" ];
     packages = with pkgs; [
       # General internet tools
       firefox
@@ -148,6 +148,7 @@
       neofetch
       libsecret
       fzf
+      gnome.sushi
 
       # Development related packages
       jdt-language-server
@@ -185,6 +186,8 @@
   # Non-noisy audio
   programs.noisetorch.enable = true;
 
+  programs.adb.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -194,6 +197,8 @@
     gnupg
     pinentry
     pinentry-gnome
+    android-tools
+    android-udev-rules
   ];
 
   fonts.fonts = with pkgs; [
